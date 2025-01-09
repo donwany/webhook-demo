@@ -32,7 +32,7 @@ def handle_webhook():
     # Insert data into MongoDB
     try:
         collection.insert_one(webhook_data)
-        return jsonify({"status": "success", "message": "Webhook data stored"}), 200
+        return jsonify({"status": "success", "message": "Webhook data stored in MongoDB"}), 200
     except Exception as e:
         print(f"Error storing webhook data: {e}")
         return jsonify({"status": "error", "message": str(e)}), 500
