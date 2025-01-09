@@ -3,6 +3,8 @@ A demo of how to use github webhooks to fire events
 
 ### Start
 ```bash
+pip install flask
+
 python app.py
 
 ngrok http 5000
