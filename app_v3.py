@@ -20,7 +20,7 @@ collection = db[COLLECTION_NAME]
 def handle_webhook():
     # Parse the webhook payload
     payload = request.json
-    event_type = request.headers.get("X-Event-Type", "unknown")
+    event_type = request.headers.get("X-GitHub-Event", "unknown")
 
     # Prepare the data to insert into MongoDB
     webhook_data = {
